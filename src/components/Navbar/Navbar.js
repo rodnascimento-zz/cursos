@@ -13,27 +13,27 @@ export default function Navbar() {
     <>
       <Nav>
         <NavLink to="/">
-          <img src={require("../../images/logo.svg")} alt="logo" />
+          <img src={require("../../images/face2.webp")} alt="logo" />
         </NavLink>
         <Bars />
         <NavMenu>
           <NavLink to="/about" activeStyle>
-            About
+            Sobre
           </NavLink>
           <NavLink to="/services" activeStyle>
-            Services
+            Serviços
           </NavLink>
           <NavLink to="/contact-us" activeStyle>
-            Contact Us
+            Contato
           </NavLink>
-          <NavLink to="/sign-up" activeStyle>
-            Sign Up
+          <NavLink to="/add" activeStyle>
+            Cadastro
           </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <NavBtnLink to="/login">Entrar</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

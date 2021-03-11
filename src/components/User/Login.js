@@ -2,6 +2,15 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import StoreContext from "../Store/Context";
 import UIButton from "../UI/Button/Button";
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink
+} from "../Navbar/NavbarElements";
+import background from "../../images/slz.jpg";
 
 import "./login.css";
 
@@ -50,49 +59,58 @@ const UserLogin = () => {
   }
 
   return (
-    <div className="user-login">
-      <h1 className="user-login__title">Acessar o Sistema -colocar icone-</h1>
-      <form onSubmit={onSubmit}>
-        <div className="user-login__form-control">
-          <label htmlFor="user">Usuário</label>
-          <input
-            id="user"
-            type="text"
-            name="user"
-            onChange={onChange}
-            value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="password">Senha</label>
-          <input
-            id="password"
-            type="password"
-            name="password"
-            onChange={onChange}
-            value={values.password}
-          />
-        </div>
-        {error && <div className="user-login__error">{error}</div>}
-        <UIButton
-          type="submit"
-          theme="contained-green"
-          className="user-login__submit-button"
-          rounded
-        >
-          Entrar
-        </UIButton>
-      </form>
-      <form onSubmit={onSubmitAdd}>
-        <UIButton
-          type="submit"
-          theme="contained-blue"
-          className="user-login__submit-button"
-          rounded
-        >
-          Cadastro
-        </UIButton>
-      </form>
+    <div
+      className="landing-wrapper"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div className="user-login">
+        <h1 className="user-login__title">
+          <NavLink to="/">
+            <img src={require("../../images/face2.webp")} alt="logo" />
+          </NavLink>
+        </h1>
+        <form onSubmit={onSubmit}>
+          <div className="user-login__form-control">
+            <label htmlFor="user">Usuário</label>
+            <input
+              id="user"
+              type="text"
+              name="user"
+              onChange={onChange}
+              value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="password">Senha</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              onChange={onChange}
+              value={values.password}
+            />
+          </div>
+          {error && <div className="user-login__error">{error}</div>}
+          <UIButton
+            type="submit"
+            theme="contained-green"
+            className="user-login__submit-button"
+            rounded
+          >
+            Entrar
+          </UIButton>
+        </form>
+        <form onSubmit={onSubmitAdd}>
+          <UIButton
+            type="submit"
+            theme="contained-blue"
+            className="user-login__submit-button"
+            rounded
+          >
+            Cadastro
+          </UIButton>
+        </form>
+      </div>
     </div>
   );
 };

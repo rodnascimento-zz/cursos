@@ -2,6 +2,15 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import StoreContext from "../Store/Context";
 import UIButton from "../UI/Button/Button";
+import {
+  Nav,
+  NavLink,
+  Bars,
+  NavMenu,
+  NavBtn,
+  NavBtnLink
+} from "../Navbar/NavbarElements";
+import background from "../../images/slz.jpg";
 
 import "./login.css";
 
@@ -46,109 +55,118 @@ const AddUser = () => {
   }
 
   return (
-    <div className="user-login">
-      <h1 className="user-login__title">Acessar o Sistema -colocar icone-</h1>
-      <form onSubmit={onSubmit}>
-        <div className="user-login__form-control">
-          <label htmlFor="user">Nome</label>
-          <input
-            id="user"
-            type="text"
-            name="user"
-            onChange={onChange}
-            value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user">Email</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            onChange={onChange}
-            //value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user">RG</label>
-          <input
-            id="rg"
-            type="text"
-            name="rg"
-            onChange={onChange}
-            //value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user">CPF</label>
-          <input
-            id="cpf"
-            type="text"
-            name="cpf"
-            onChange={onChange}
-            //value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user">CRO/MA</label>
-          <input
-            id="cro"
-            type="text"
-            name="cro"
-            onChange={onChange}
-            //value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user">Endereço</label>
-          <input
-            id="endereco"
-            type="text"
-            name="endereco"
-            onChange={onChange}
-            //value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user">Telefone</label>
-          <input
-            id="telefone"
-            type="text"
-            name="telefone"
-            onChange={onChange}
-            //value={values.user}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="password">Senha</label>
-          <input
-            id="password"
-            type="password"
-            name="password"
-            onChange={onChange}
-            value={values.password}
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="password">Confirmar Senha</label>
-          <input
-            id="passwordCheck"
-            type="password"
-            name="passwordCheck"
-            onChange={onChange}
-            //value={values.password}
-          />
-        </div>
-        {error && <div className="user-login__error">{error}</div>}
-        <UIButton
-          type="submit"
-          theme="contained-green"
-          className="user-login__submit-button"
-          rounded
-        >
-          Confirmar
-        </UIButton>
-      </form>
+    <div
+      className="landing-wrapper"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div className="user-login">
+        <h1 className="user-login__title">
+          <NavLink to="/">
+            <img src={require("../../images/face2.webp")} alt="logo" />
+          </NavLink>
+        </h1>
+        <form onSubmit={onSubmit}>
+          <div className="user-login__form-control">
+            <label htmlFor="user">Nome</label>
+            <input
+              id="user"
+              type="text"
+              name="user"
+              onChange={onChange}
+              value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="user">Email</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              onChange={onChange}
+              //value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="user">RG</label>
+            <input
+              id="rg"
+              type="text"
+              name="rg"
+              onChange={onChange}
+              //value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="user">CPF</label>
+            <input
+              id="cpf"
+              type="text"
+              name="cpf"
+              onChange={onChange}
+              //value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="user">CRO/MA</label>
+            <input
+              id="cro"
+              type="text"
+              name="cro"
+              onChange={onChange}
+              //value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="user">Endereço</label>
+            <input
+              id="endereco"
+              type="text"
+              name="endereco"
+              onChange={onChange}
+              //value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="user">Telefone</label>
+            <input
+              id="telefone"
+              type="text"
+              name="telefone"
+              onChange={onChange}
+              //value={values.user}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="password">Senha</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              onChange={onChange}
+              value={values.password}
+            />
+          </div>
+          <div className="user-login__form-control">
+            <label htmlFor="password">Confirmar Senha</label>
+            <input
+              id="passwordCheck"
+              type="password"
+              name="passwordCheck"
+              onChange={onChange}
+              //value={values.password}
+            />
+          </div>
+          {error && <div className="user-login__error">{error}</div>}
+          <UIButton
+            type="submit"
+            theme="contained-green"
+            className="user-login__submit-button"
+            rounded
+          >
+            Confirmar
+          </UIButton>
+        </form>
+      </div>
     </div>
   );
 };

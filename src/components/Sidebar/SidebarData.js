@@ -1,5 +1,6 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
+import * as BsIcons from "react-icons/bs";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
@@ -10,9 +11,9 @@ export const SidebarData = [
     path: "/",
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />
 
-    subNav: [
+    /*subNav: [
       {
         title: "Users",
         path: "/overview/users",
@@ -23,16 +24,34 @@ export const SidebarData = [
         path: "/overview/revenue",
         icon: <IoIcons.IoIosPaper />
       }
-    ]
+    ]*/
+  },
+  {
+    title: "Login",
+    path: "/login",
+    icon: <BsIcons.BsPeopleCircle />
+  },
+  {
+    title: "Cadatro",
+    path: "/add",
+    icon: <BsIcons.BsPencil />,
+
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />
+  },
+  {
+    title: "Equipe",
+    path: "/equipe",
+    icon: <IoIcons.IoMdPeople />
   },
   {
     title: "Artigos",
     path: "/artigos",
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />
 
-    subNav: [
+    /*subNav: [
       {
         title: "Reports",
         path: "/reports/reports1",
@@ -50,42 +69,11 @@ export const SidebarData = [
         path: "/reports/reports3",
         icon: <IoIcons.IoIosPaper />
       }
-    ]
+    ]*/
   },
   {
-    title: "Products",
-    path: "/login",
-    icon: <FaIcons.FaCartPlus />
-  },
-  {
-    title: "Equipe",
-    path: "/equipe",
-    icon: <IoIcons.IoMdPeople />
-  },
-  {
-    title: "Messages",
-    path: "/add",
-    icon: <FaIcons.FaEnvelopeOpenText />,
-
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpSFill />,
-
-    subNav: [
-      {
-        title: "Message 1",
-        path: "/messages/message1",
-        icon: <IoIcons.IoIosPaper />
-      },
-      {
-        title: "Message 2",
-        path: "/messages/message2",
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]
-  },
-  {
-    title: "Support",
-    path: "/support",
+    title: "Suporte",
+    path: "/suporte",
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];
