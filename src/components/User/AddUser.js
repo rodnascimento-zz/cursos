@@ -90,7 +90,7 @@ const AddUser = () => {
 
   return (
     <div
-      className="landing-wrapper"
+      className="landing-wrapper-add"
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="user-login">

@@ -60,7 +60,7 @@ const UserLogin = () => {
 
   return (
     <div
-      className="landing-wrapper"
+      className="landing-wrapper-login"
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="user-login">
