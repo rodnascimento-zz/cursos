@@ -27,22 +27,12 @@ export const SidebarData = [
     ]*/
   },
   {
-    title: "Login",
-    path: "/login",
-    icon: <BsIcons.BsPeopleCircle />
-  },
-  {
-    title: "Cadatro",
-    path: "/add",
+    title: "Cursos",
+    path: "/cursos",
     icon: <BsIcons.BsPencil />,
 
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />
-  },
-  {
-    title: "Equipe",
-    path: "/equipe",
-    icon: <IoIcons.IoMdPeople />
   },
   {
     title: "Artigos",
@@ -50,26 +40,18 @@ export const SidebarData = [
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />
-
-    /*subNav: [
-      {
-        title: "Reports",
-        path: "/reports/reports1",
-        icon: <IoIcons.IoIosPaper />,
-        cName: "sub-nav"
-      },
-      {
-        title: "Reports 2",
-        path: "/reports/reports2",
-        icon: <IoIcons.IoIosPaper />,
-        cName: "sub-nav"
-      },
-      {
-        title: "Reports 3",
-        path: "/reports/reports3",
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]*/
+  },
+  {
+    title: "Calendario",
+    path: "/calendario",
+    icon: <IoIcons.IoIosPaper />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />
+  },
+  {
+    title: "Equipe",
+    path: "/equipe",
+    icon: <IoIcons.IoMdPeople />
   },
   {
     title: "Suporte",

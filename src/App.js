@@ -5,21 +5,30 @@ import Home from "./pages/Home";
 import Equipe from "./pages/Equipe";
 import Suporte from "./pages/Suporte";
 import Artigos from "./pages/Artigos";
+import Calendario from "./pages/Calendario";
+import Cursos from "./pages/Cursos";
 import Login from "./components/User/Login";
 import Add from "./components/User/AddUser";
 import Navbar from "./components/Navbar/Navbar";
+import grey from "./images/grey.jpg";
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/equipe" exact component={Equipe} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/add" exact component={Add} />
-        <Route path="/artigos" exact component={Artigos} />
-        <Route path="/Suporte" exact component={Suporte} />
-      </Switch>
-    </Router>
+    <div
+      className="landing-wrapper-app"
+      style={{ backgroundImage: `url(${grey})` }}
+    >
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/equipe" exact component={Equipe} />
+          <Route path="/cursos" exact component={Cursos} />
+          <Route path="/artigos" exact component={Artigos} />
+          <Route path="/calendario" exact component={Calendario} />
+          <Route path="/Suporte" exact component={Suporte} />
+        </Switch>
+      </Router>
+    </div>
   );
 }

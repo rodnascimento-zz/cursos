@@ -6,8 +6,8 @@ import "../styles.css";
 export default function Equipe() {
   return (
     <div>
-      <Sidebar />
       <Navbar />
+      <Sidebar />
       <h1>Equipe</h1>
     </div>
   );

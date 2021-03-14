@@ -6,8 +6,8 @@ import "../styles.css";
 export default function Suporte() {
   return (
     <div>
-      <Sidebar />
       <Navbar />
+      <Sidebar />
       <h1>Suporte</h1>
     </div>
   );

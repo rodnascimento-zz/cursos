@@ -17,24 +17,22 @@ export default function Navbar() {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to="/about" activeStyle>
-            Sobre
+          <NavLink to="/cursos" activeStyle>
+            Matricule-se
           </NavLink>
-          <NavLink to="/services" activeStyle>
-            Serviços
-          </NavLink>
-          <NavLink to="/contact-us" activeStyle>
-            Contato
-          </NavLink>
-          <NavLink to="/add" activeStyle>
-            Cadastro
-          </NavLink>
+          <NavBtnLink to="/login">Aluno</NavBtnLink>
+          <NavBtnLink to="/login" style={{ backgroundColor: `green` }}>
+            Professor
+          </NavBtnLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/login">Entrar</NavBtnLink>
-        </NavBtn>
+        {/*<NavBtn>
+          <NavBtnLink to="/login">Aluno</NavBtnLink>
+          <NavBtnLink to="/login" style={{ backgroundColor: `green` }}>
+            Professor
+          </NavBtnLink>
+        </NavBtn>*/}
       </Nav>
     </>
   );

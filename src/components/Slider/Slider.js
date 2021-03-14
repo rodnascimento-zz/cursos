@@ -24,7 +24,7 @@ export default class SimpleSlider extends Component {
           {SliderData.map((photo, key) => {
             return (
               <div>
-                <img key={key} width="50%" src={photo.img} alt={photo.name} />
+                <img key={key} width="auto" src={photo.img} alt={photo.name} />
               </div>
             );
           })}
