@@ -1,35 +1,44 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import React, { Component } from "react";
-import Slider from "react-slick";
-import "./slider.css";
+import React, { useState } from "react";
 import { SliderData } from "./SliderData";
+import Carousel from "react-elastic-carousel";
+import Card from "./Card";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import "./slider.css";
 
-export default class SimpleSlider extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      fade: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      arrows: true,
-      slidesToScroll: 1,
-      className: "slides"
-    };
-    return (
-      <div className="slider">
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          {SliderData.map((photo, key) => {
-            return (
-              <div>
-                <img key={key} width="auto" src={photo.img} alt={photo.name} />
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-    );
+const Slider = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
   }
-}
+
+  return (
+    <section className="slider">
+      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      {SliderData.map((slide, index) => {
+        return (
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === current && (
+              <img src={slide.img} alt="travel" className="image" />
+            )}
+          </div>
+        );
+      })}
+    </section>
+  );
+};
+
+export default Slider;

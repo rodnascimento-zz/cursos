@@ -10,7 +10,7 @@ export default function Cursos() {
       <Sidebar />
       <h1>Cursos</h1>
       <div className="container">
-        <div className="white-box-small"></div>
+        <div className="white-box">1</div>
       </div>
     </div>
   );
