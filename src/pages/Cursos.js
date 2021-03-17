@@ -1,6 +1,8 @@
 import React from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Navbar from "../components/Navbar/Navbar";
+import Card from "../components/Card-Cursos/Card";
+import { CardData } from "../components/Card-Cursos/CardData";
 import "./pages.css";
 
 export default function Cursos() {
@@ -8,10 +10,16 @@ export default function Cursos() {
     <div>
       <Navbar />
       <Sidebar />
-      <h1>Cursos</h1>
-      <div className="container">
-        <div className="white-box">1</div>
-      </div>
+      {CardData.map((item, index) => {
+        return (
+          <Card
+            title={item.title}
+            imageUrl={item.image}
+            body={item.body}
+            key={index}
+          />
+        );
+      })}
     </div>
   );
 }
