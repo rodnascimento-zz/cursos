@@ -1,0 +1,55 @@
+.artigo-container {
+  margin: auto;
+  margin-top: 50px;
+  width: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.3s;
+  animation: ease-in-out;
+  background-color: white;
+}
+
+.artigo-content {
+  margin: 1rem;
+  margin-top: 0.5rem;
+  border-bottom-style: solid;
+  border-color: black;
+}
+
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.artigo-title {
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.artigo-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.artigo-btn button {
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+  transition: 0.2s;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+}
+
+.artigo-btn button:hover {
+  background: rgba(27, 156, 252, 0.1);
+  transform: scale(1.1);
+}
+
+a {
+  text-transform: uppercase;
+  color: #1b9cfc;
+  text-decoration: none;
+  font-weight: bold;
+}
